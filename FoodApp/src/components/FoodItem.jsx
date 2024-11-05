@@ -1,5 +1,5 @@
 import styles from "./fooditem.module.css";
-export default function FootItem({ food }) {
+export default function FootItem({ food, setFoodId }) {
   return (
     <div className={styles.itemContainer}>
       <img className={styles.itemImage} src={food.image} alt="" />
@@ -8,7 +8,15 @@ export default function FootItem({ food }) {
       </div>
       <div className={styles.buttonContainer}>
         {" "}
-        <button className={styles.itemButton}>View Recipe</button>
+        <button
+          onClick={() => {
+            console.log(food.id);
+            setFoodId(food.id);
+          }}
+          className={styles.itemButton}
+        >
+          View Recipe
+        </button>
       </div>
     </div>
   );
