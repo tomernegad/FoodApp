@@ -4,7 +4,7 @@ export default function FoodDeatails({ foodId }) {
   const [food, setFood] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const URL = `https://api.spoonacular.com/recipes/${foodId}/information`;
-  const API_KEY = "e0d652513a5f4f5bb01aff0c319b7083";
+  const API_KEY = "5211d3a099874e21b36be10421977c9d";
   useEffect(() => {
     async function fetchFood() {
       const res = await fetch(`${URL}?apiKey=${API_KEY}`);
@@ -38,6 +38,20 @@ export default function FoodDeatails({ foodId }) {
         <div>
           💲<span> {food.pricePerServing / 100} Per serving </span>
         </div>
+        <h2>Ingredients</h2>
+        {food.extendedIngredients.map((item) => (
+          <div>
+            <img
+              src={
+                `https://spoonacular.com/cdn/ingredients_100x100/` + item.image
+              }
+            />
+            <h3>{item.name}</h3>
+            <h3>
+              {item.amount} {item.unit}
+            </h3>
+          </div>
+        ))}
         <h2> Instructions</h2>
         <div className={styles.recipeInstructions}>
           <ol>
