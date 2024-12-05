@@ -1,3 +1,27 @@
 body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #f0f2f5,
+    #cfd9df
+  ); /* Gradient background */
+  min-height: 100vh; /* Ensure the background covers the full height */
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  padding: 20px;
+  background: url("./assets/background.jpg") no-repeat center center; /* Background image */
+  background-size: cover; /* Cover the entire container */
+  border-radius: 8px; /* Rounded corners for the app container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a professional look */
+  width: 100%;
+  max-width: 1200px; /* Limit the maximum width */
+}
+
+.container {
+  margin-top: 20px;
 }
