@@ -2,6 +2,8 @@
 
 A web application project developed using JavaScript, CSS, and HTML.
 
+![image](https://github.com/user-attachments/assets/37a6de5c-6abb-4291-bd68-64fa62fc5426)
+
 ## Table of Contents
 - Introduction
 - Features
